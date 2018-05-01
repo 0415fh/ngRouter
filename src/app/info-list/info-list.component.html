@@ -1,0 +1,31 @@
+<!-- <app-header-top></app-header-top> -->
+<div class="info-list">
+  <div class="nav">
+    <span>详情</span><span>列表</span>
+  </div>
+  <ul class="fix">
+    <li *ngFor="let item of commoditylist">
+      <!-- <img src="../../assets/img/pic1.jpg" alt=""> -->
+       <dl class="fix"  [routerLink]="['/detailed']" [queryParams]="{id:item.id, name:item.name, price: item.price, imgUrl:item.imgUrl}">
+      <!--<dl class="fix"  [routerLink]="['/detailed', item.id]">-->
+        <dt><img src={{item.imgUrl}} alt=""></dt>
+        <dd >
+          <p><b>{{item.name}}</b></p>
+          <p><span>{{item.price | currency:'USD':true:'3.2-2'}}</span></p>
+          <p><label class="l">免运费</label><label class="center">1432人付款</label></p>
+        </dd>
+      </dl>
+    </li>
+
+    <!--<li>-->
+      <!--<dl class="fix"  [routerLink]="['/detailed', commoditylist.id]">-->
+        <!--<dt><img src={{commoditylist.imgUrl}} alt=""></dt>-->
+        <!--<dd >-->
+          <!--<p><b>{{commoditylist.name}}</b></p>-->
+          <!--<p><span>{{commoditylist.price | currency:'USD':true:'3.2-2'}}</span></p>-->
+          <!--<p><label class="l">免运费</label><label class="center">1432人付款</label></p>-->
+        <!--</dd>-->
+      <!--</dl>-->
+    <!--</li>-->
+  </ul>
+</div>

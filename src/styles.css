@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+html,body,div,ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dd,dt,span,a,label,input,b,i{
+  margin:0;
+  padding:0;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+.clearfix:after,.fix:after{
+  content:".";
+  clear:both;
+  display:block;
+  height:0;
+  overflow:hidden;
+  visibility:hidden;
+}
